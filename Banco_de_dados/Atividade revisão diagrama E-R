@@ -1,0 +1,43 @@
+create table Entrevista (
+      data_entrevista date not null,
+      contratantes varchar (100)not null, 
+      candidatos varchar (100)not null,
+      cod_entrevistado serial not null,
+      salario decimal (6,2) not null,
+        primary key (cod_entrevistado)
+      )
+create table Candidato(
+  nome varchar (100) not null,
+  cpf int not null,
+  formacao text not null,
+  metas text not null,
+  habilidades text not null,
+  competencias text not null,
+  cod_entrevistado_fk serial not null,
+  primary key (cpf)
+  foreign key (cod_entrevistado_fk) references Entrevista (cod_entrevistado)
+  )
+  
+  create table Curriculo(
+    objetivos text not null,
+    candidato varchar (100) not null,
+    foreign key (candidato) references Candidato (nome)
+    )
+    
+    create table Contratante(
+      nome varchar (100) not null,
+      empresa varchar (100) not null
+      cnpj int not NULL
+      curriculos_fk varchar (100) not NULL
+      )
+      
+      alter table Contratante add foreign key curriculos_fk references curriculo 
+      
+      insert into ('data_entrevistado', 'contratantes', 'candidatos', 'salario')
+      values ('2023-03-23', 'julia','roberta', '1600,00')
+      ('2023-03-23', 'Antonio','joao paulo', '1600,00')
+      ('2023-03-23', 'Alberto','joao pedro', '1600,00')
+      ('2023-03-23', 'Amanda','joao luca', '1600,00')
+      
+      select * from Entrevista 
+
