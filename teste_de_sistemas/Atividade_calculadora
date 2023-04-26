@@ -72,4 +72,11 @@ Etapa 2 – Insira propositalmente um defeito no seu algoritmo
 Neste algoritmo o erro são números com “ , ” , as vírgulas não funcionam porque usamos o int.
 O int serve somente para números inteiros.
 
+Etapa 3 – Passe o seu algoritmo para a outra dupla (sorteada pelo professor) e receba o algoritmo de outra dupla (também sorteada pelo professor)
+Passamos o algoritmo para dupla 5 e recebemos o da dupla 2.
+Última etapa- Aplique seus testes sobre o algoritmo recebido
+
+https://github.com/wh0am-i/CalculadoraJabba 
+Faltou terminar de fazer o código da raiz, potência, C, mudaSinal e vírgula.
+
 
