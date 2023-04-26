@@ -1,0 +1,82 @@
+Calculadora de horas
+maria ana martins macedo
+
+
+package com.example.meuprimeiroapp;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.os.MemoryFile;
+import android.view.View;
+import android.view.ViewStructure;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class comum extends AppCompatActivity {
+   EditText HI, MI, HF, MF;
+   TextView RH, RM;
+
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_comum);
+       getSupportActionBar().hide();
+       HI = findViewById(R.id.horainicial);
+       MI = findViewById(R.id.minutoinicial);
+       HF = findViewById(R.id.horafinal);
+       MF = findViewById(R.id.minutofinal);
+       RH = findViewById(R.id.resultadohora);
+       RM = findViewById(R.id.resultadominuto);
+
+   }
+
+   public void soma(View v) {  //Botão soma
+       int horaI = Integer.parseInt(HI.getText().toString());
+       int minutoI = Integer.parseInt(MI.getText().toString());
+       int horaF = Integer.parseInt(HF.getText().toString());
+       int minutoF = Integer.parseInt(MF.getText().toString());
+       int ResH = horaI + horaF;
+       int ResM = minutoI + minutoF;
+       while (ResM > 59) {
+           ResM -= 60;
+           ResH++;
+           while(horaI>0){
+               horaI --;
+               minutoI += 60;
+           }
+           int RH = 0;
+           int RM = minutoI-minutoF;
+           if (minutoF > minutoI) {
+               RM = minutoF - minutoI;
+           }
+       }
+       RH.setText(ResH+"");
+       RM.setText(ResM+"");
+   }
+   public void sub(View v) {     //Botão subtração
+       int hI = Integer.parseInt(HI.getText().toString());
+       int mI = Integer.parseInt(MI.getText().toString());
+       int hF = Integer.parseInt(HF.getText().toString());
+       int mF = Integer.parseInt(MF.getText().toString());
+       int ReH = hI - hF;
+       int ReM = mI - mF;
+       while (ReM > 59) {
+           ReM -= 60;
+           ReH++;
+           while(hI>0){
+               hI --;
+               mI += 60;
+           }
+           int RH = 0;
+           int RM = mI-mF;
+           if (mF > mI) {
+               RM = mF - mI;
+}
+       }
+       RH.setText(ReH+"");
+       RM.setText(ReM+"");
+   }
+
+}
+
