@@ -1,0 +1,5 @@
+function idade(){
+const 1 = 365
+const idade = (1 = 365, 2 = 730, 3 = 1095, 4 = 1460, i++)
+}
+console.log(idade(12))

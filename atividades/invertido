@@ -1,0 +1,11 @@
+function invertido (numero){
+    var inverso = o;
+    while(numero !=0)
+    {
+        inverso = inverso * 10;
+        inverso = inverso + numero % 10;
+        numero = Math.trunc(numero/10);
+    }
+    return inverso;
+}
+console.log(invertido(12345))

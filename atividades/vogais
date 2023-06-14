@@ -1,0 +1,33 @@
+function contaVogais(texto){
+    var contador = 0;
+    texto=texto.toLowerCase();
+    for(var i=0; i<texto.length; i++){
+        if(texto.charAt(i)=="a"||texto.charAt(i)=="e"||texto.charAt(i)=="i"||texto.charAt(i)=="o"||texto.charAt(i)=="u"){
+            contador++;//icrementa a contagem de vogais
+        }
+
+    
+    }
+    return contador;
+}
+console.log(contaVogais("Felicidade"))
+
+/*ou pode ser feito:
+
+function vogais(letra){
+    switch (letra){
+        case "a":
+            return true;
+        case "e":
+            return true;
+        case "i":
+            return true;
+        case "o":
+            return true;
+        case "u":
+            return true;
+        defalt:
+            return false
+        }
+}
+*/
